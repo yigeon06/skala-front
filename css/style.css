@@ -64,6 +64,79 @@ a:hover {
 }
 
 /*----------------------------------------------------------------------------------------------------------------------*/
+/* index */
+.shortcut-menu-container {
+    text-align: center;
+    margin: 30px 0 10px 0;
+}
+
+.shortcut-menu-container h3 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #5f6368;
+    margin-bottom: 16px;
+}
+
+.shortcut-links {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.shortcut-links a {
+    background-color: #f4f6fa;
+    color: #080808;
+    border: 1px solid #ebeef3;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none !important;
+    transition: all 0.15s ease-in-out;
+}
+
+.shortcut-links a:hover {
+    background-color: #03c75a;
+    color: #ffffff !important;
+    border-color: #03c75a;
+    box-shadow: 0 4px 12px rgba(3, 199, 90, 0.12);
+}
+
+.content-wrapper {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.content-wrapper h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.content-wrapper main {
+    flex: 3;
+    background-color: #ffffff;
+}
+
+.content-wrapper aside {
+    flex: 1;
+    background-color: #f8fafc;
+    border: 1px solid #ebeef3;
+    border-radius: 8px;
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+.content-wrapper aside h3 {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+/*----------------------------------------------------------------------------------------------------------------------*/
 /* myTrip */
 .audio-card {
     background-color: #ffffff;
@@ -93,11 +166,11 @@ a:hover {
     text-align: center;       
 }
 
-.trip-grid-container {
-    display: flex;            
-    flex-wrap: wrap;               
-    gap: 20px;               
-    margin-top: 25px;
+.trip-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin: 25px 0 40px 0;
 }
 
 .trip-card {
@@ -107,8 +180,6 @@ a:hover {
     padding: 16px;
     margin: 0;                         
     text-align: center;                
-    
-    width: calc(33.333% - 14px);
     box-sizing: border-box;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
@@ -122,9 +193,7 @@ a:hover {
 .trip-card img {
     border-radius: 6px;
     width: 100%;
-    
     height: 220px;                     
-    
     object-fit: cover;                 
 }
 
@@ -168,41 +237,86 @@ a:hover {
 
 /*----------------------------------------------------------------------------------------------------------------------*/
 /* myClass */
-table {
-    width: 100%;          
-    border-collapse: collapse; 
+
+.timetable {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
     margin: 25px 0 40px 0;
-    font-size: 14px;       
-    text-align: center;      
+    font-size: 14px;
+    text-align: center;
+    border: 1px solid #c9ebd4;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
-th {
-    background-color: #f4f6fa;
-    color: #080808;         
-    font-weight: 700;         
-    padding: 14px 10px;       
-    border-top: 2px solid #080808; 
+.timetable th {
+    background-color: #e8f7ec;
+    color: #028a3c;
+    font-weight: 700;
+    padding: 16px 12px;
+    border-bottom: 2px solid #03c75a;
+    border-right: 1px solid #c9ebd4;
+}
+
+.timetable th:last-child {
+    border-right: none;
+}
+
+.timetable td {
+    padding: 14px 10px;
+    color: #333333;
     border-bottom: 1px solid #ebeef3;
+    border-right: 1px solid #ebeef3;
+    background-color: #ffffff;
+    line-height: 1.5;
 }
 
-td {
-    padding: 16px 10px;        
-    color: #333333;          
-    border-bottom: 1px solid #ebeef3; 
-    background-color: #ffffff; 
+.timetable tr:last-child td {
+    border-bottom: none;
 }
 
-td:first-child {
-    background-color: #f8fafc; 
-    font-weight: 600;         
-    color: #5f6368;           
+.timetable td:last-child {
+    border-right: none;
 }
 
-.lunch-time td {
-    background-color: #fdfdfd; 
-    color: #777777;            
-    font-style: italic;       
-    letter-spacing: 2px;   
+.timetable td.time-col {
+    background-color: #fafdfa;
+    font-weight: 700;
+    color: #028a3c;
+    border-right: 1px solid #c9ebd4;
+    font-size: 13px;
+    width: 120px;
+}
+
+.timetable .lunch-row td {
+    background-color: #e8f7ec;
+    color: #028a3c;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 4px;
+}
+
+.subject-card {
+    font-weight: 700;
+    transition: all 0.2s ease-in-out;
+}
+
+.subject-card:hover {
+    background-color: #f2f9f3 !important;
+    transform: scale(1.01);
+    box-shadow: inset 0 0 0 1px #03c75a;
+    cursor: default;
+}
+
+.green-light {
+    background-color: #f1faf3;
+    color: #03c75a;
+}
+
+.green-point {
+    background-color: #e3f5e7;
+    color: #028a3c;
 }
 
 /*----------------------------------------------------------------------------------------------------------------------*/
@@ -325,27 +439,31 @@ form p > label:has(input[type="checkbox"]) {
 }
 
 form fieldset p:has(textarea) {
+    /* 1. 깨진 정렬을 복구하기 위해 flex 정렬 방향을 세로(column)로 변경합니다 */
+    display: flex;
+    flex-direction: column;
+    
+    /* 2. 네이버 스타일 카드의 내부 여백과 일치시킵니다 */
     padding: 16px;
+    box-sizing: border-box;
 }
 
+/* 네이버 가입창 레이아웃에 맞춰 자기소개의 라벨 글씨도 깔끔하게 숨깁니다 */
 form fieldset p:has(textarea) label {
-    display: block !important;   
-    width: 100% !important;
-    font-size: 14px;
-    color: #777777;
-    margin-bottom: 10px;
-    font-weight: 600;
+    display: none !important;   
 }
 
+/* 여러 줄 입력창(textarea)이 카드 내부에 빈틈없이 꽉 차도록 다듬습니다 */
 form textarea {
     width: 100%;
-    height: 100px;
-    border: none;                
-    padding: 0;
-    font-size: 14px;
+    height: 100px;              /* 텍스트창 높이 */
+    border: none;               /* 투박한 자체 외곽선 지움 */
+    padding: 0;                 /* 내부 패딩 초기화 */
+    font-size: 15px;            /* 다른 입력창들과 글자 크기 통일 */
     color: #080808;
-    resize: none;
-    outline: none;
+    background-color: transparent;
+    resize: none;               /* 사용자가 임의로 크기 변형하는 것 차단 */
+    outline: none;              /* 클릭 시 파란 테두리 차단 */
 }
 
 form p:has(#signupSource) label {
@@ -391,5 +509,47 @@ form button[type="reset"] {
     transition: color 0.15s ease;
 }
 
+.signup-subtitle {
+    text-align: center;
+    font-size: 14px;
+    color: #5f6368;
+    margin-top: -15px;
+    margin-bottom: 15px;
+}
+
 /*----------------------------------------------------------------------------------------------------------------------*/
 /* signUpResult */
+
+
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .content-wrapper main,
+    .content-wrapper aside {
+        width: 100%;
+        flex: none;
+    }
+
+    .trip-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+header h1 {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
