@@ -4,58 +4,75 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>나의 휴일 일과</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="holiday-page">
     <div class="container">
 
         <header>
-            <h1>🎉 나의 휴일 일과</h1>
+            <h1>🌴 나의 휴일 일과</h1>
         </header>
 
-        <main>
+        <!-- 카드들을 단정하게 정렬하기 위한 그리드 래퍼 추가 -->
+        <main class="holiday-grid">
             
-            <section class="schedule-section">
+            <!-- 세션 1: 느긋한 아침 -->
+            <section class="holiday-card">
                 <h2>🛏️ 느긋한 아침</h2>
-                
-                <img src="https://images.unsplash.com/photo-1517433456452-f9633a875f6f?w=600&auto=format&fit=crop" 
-                     alt="따뜻한 아침 햇살이 비치는 침실 창가 테이블 위에 정갈하게 차려진 토스트와 프라이, 베이컨 브런치 플레이트" 
-                     class="section-img">
-                
-                <p><b>09:00</b> - 😴 늦잠 자는 행복</p>
-                <p><b>10:00</b> - 🍳 여유 있게 <mark>브런치</mark> 즐기기</p>
-                <p><b>11:00</b> - ☕ <b>커피 한 잔</b>과 음악 감상 🎵</p>
+                <div class="holiday-img-box">
+                    <img src="media/아침.jpg" alt="아침" class="section-img">
+                </div>
+                <div class="holiday-content">
+                    <p><b>09:00</b> - 😴 늦잠 자는 행복</p>
+                    <p><b>10:00</b> - 🍳 여유 있게 <mark>브런치</mark> 즐기기</p>
+                    <p><b>11:00</b> - ☕ <b>커피 한 잔</b>과 음악 감상 🎵</p>
+                </div>
             </section>
 
-            <section class="schedule-section">
+            <!-- 세션 2: 오후 활동 -->
+            <section class="holiday-card">
                 <h2>🚶 오후 활동</h2>
-                
-                <img src="https://images.unsplash.com/photo-1502082553048-f009c37129b9?w=600&auto=format&fit=crop" 
-                     alt="푸른 잔디와 무성하게 우거진 거대한 초록빛 나무들이 가득하고 햇빛이 은은하게 내리쬐는 평화로운 공원의 풍경" 
-                     class="section-img">
-                
-                <p><b>13:00</b> - 🏞️ 공원 산책하며 <b>마음 정리</b></p>
-                <p><b>14:30</b> - 📷 사진 찍으며 <b>일상의 순간 기록</b></p>
-                <p><b>16:00</b> - 🛍️ 충동구매 대신 <mark>창의적인 쇼핑</mark></p>
+                <div class="holiday-img-box">
+                    <img src="media/오후.jpg" alt="오후" class="section-img">
+                </div>
+                <div class="holiday-content">
+                    <p><b>13:00</b> - 🏞️ 공원 산책하며 <b>마음 정리</b></p>
+                    <p><b>14:30</b> - 📷 사진 찍으며 <b>일상의 순간 기록</b></p>
+                    <p><b>16:00</b> - 🛍️ 충동구매 대신 <mark>창의적인 쇼핑</mark></p>
+                </div>
             </section>
 
-            <section class="schedule-section">
+            <!-- 세션 3: 저녁과 밤 -->
+            <section class="holiday-card">
                 <h2>🎬 저녁과 밤</h2>
-                
-                <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=600&auto=format&fit=crop" 
-                     alt="아늑하고 따뜻한 조명 아래 주방 싱크대 위에서 다양한 신선한 야채 재료들을 손질해 놓은 저녁 요리 준비 현장" 
-                     class="section-img">
-                
-                <p><b>18:00</b> - 🥘 <b>맛있는 저녁</b> 만들기</p>
-                <p><b>20:00</b> - 🎥 영화 감상 (코미디 추천 😂)</p>
-                <p><b>23:00</b> - 📖 짧은 독서 후 힐링 타임 🛁</p>
+                <div class="holiday-img-box">
+                    <img src="media/저녁.jpg" alt="저녁" class="section-img">
+                </div>
+                <div class="holiday-content">
+                    <p><b>18:00</b> - 🥘 <b>맛있는 저녁</b> 만들기</p>
+                    <p><b>20:00</b> - 🎥 영화 감상 (코미디 추천 😂)</p>
+                    <p><b>23:00</b> - 📖 짧은 독서 후 힐링 타임 🛁</p>
+                </div>
+            </section>
+
+            <!-- [추가] 세션 4: 새벽 -->
+            <section class="holiday-card">
+                <h2>🌌 깊은 새벽</h2>
+                <div class="holiday-img-box">
+                    <img src="media/새벽.jpg" alt="새벽" class="section-img">
+                </div>
+                <div class="holiday-content">
+                    <p><b>01:00</b> - 💻 감성 가득한 <b>개인 프로젝트 코딩</b></p>
+                    <p><b>03:00</b> - 🎵 조용한 플레이리스트 무한 반복</p>
+                    <p><b>04:00</b> - 😴 내일을 위한 <b>기분 좋은 일기 쓰기 후 취침</b></p>
+                </div>
             </section>
 
         </main>
 
         <footer>
             <hr>
-            <p>📅 휴일 버전 작성일: 2026년 5월</p>
+            <p>📅 휴일 버전 최종 수정일: 2026년 7월</p>
         </footer>
 
     </div>
