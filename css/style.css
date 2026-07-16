@@ -1,0 +1,47 @@
+/* css/style.css */
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", helvetica, "Apple SD Gothic Neo", sans-serif;
+    font-size: 16px;
+
+    background-color: #ffffff; /* 배경색 */
+    color: #080808;            /* 글자색 */
+    line-height: 1.6;          /* 줄간격 1.6배 설정 */
+    
+    /* 전체 여백 초기화 및 기본 바디 여백 설정 */
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", helvetica, "Apple SD Gothic Neo", sans-serif;
+    font-size: 32px;                     /* 화면 밸런스를 위해 44px에서 네이버 헤드라인 급인 32px로 조정 */
+    font-weight: 700;                    /* 제목의 두께감을 살리기 위해 굵게 설정 */
+    color: #080808;                      /* 짙은 네이버 텍스트 색상 적용 */
+    border-bottom: 2px solid #ebeef3;    /* 타이틀 하단에 깔끔하고 얇은 그레이 경계선 추가 */
+    padding-bottom: 16px;                /* 밑줄과 글자 사이의 안정적인 안쪽 여백 설정 */
+    margin-top: 10px;                    /* 바깥쪽 위 여백[cite: 1] */
+    margin-bottom: 25px;                 /* 바깥쪽 아래 여백[cite: 1] */
+}
+ㄴ
+h2 {
+    font-family: -apple-system, BlinkMacSystemFont, "Malgun Gothic", "맑은 고딕", helvetica, "Apple SD Gothic Neo", sans-serif;
+    font-size: 20px;                     /* 본문(16px)보다 확실하게 구분되는 적절한 크기 */
+    font-weight: 700;                    /* 제목 텍스트 강조를 위한 굵은 두께 설정 */
+    color: #080808;                      /* 텍스트 메인 컬러 적용 */
+    padding-left: 10px;                  /* 왼쪽 강조 포인트 선과 글자 사이의 안쪽 여백[cite: 1] */
+    border-left: 4px solid #03c75a;      /* 네이버 시그니처 그린 컬러(#03c75a)로 왼쪽에 세로 포인트 줄 추가 */
+    margin-top: 35px;                    /* 이전 섹션과의 구분을 위해 넉넉한 상단 바깥 여백 부여[cite: 1] */
+    margin-bottom: 15px;                 /* 바로 아래 배치될 본문 콘텐츠와의 안정적인 간격[cite: 1] */
+}
+
+a {
+    color: #080808;            /* 링크의 기본 색상을 본문 글자색과 동일하게 차분한 톤으로 지정 */
+    text-decoration: none;     /* 링크 밑에 항상 표시되는 기본 밑줄을 깔끔하게 제거 */
+    transition: color 0.2s ease; /* 마우스를 올렸을 때 색상이 부드럽게 변하도록 트랜지션 추가 */
+}
+
+a:hover {
+    color: #03c75a;            /* 마우스를 올리면 네이버 시그니처 그린 색상으로 전환 */
+    text-decoration: underline; /* 마우스를 올렸을 때만 직관적인 밑줄 표시 */
+}
