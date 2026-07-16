@@ -39,13 +39,32 @@
                     </article>
                 </section>
 
-                <section>
-                    <h3>📸 이달의 베스트 컷</h3>
-                    <figure>
-                        <img src="media/오사카성.jpg" width="300" height="150" alt="오사카성">
-                        <figcaption>일본 오사카성의 아름다운 풍경 (2025년 촬영)</figcaption>
-                    </figure>
-                </section>
+                <hr>
+                
+                <div class="best-and-game-wrapper">
+                    
+                    <!-- 왼쪽 구역: 이달의 베스트 컷 (구조를 미니게임 섹션과 통일합니다) -->
+                    <section class="best-cut-section">
+                        <h3>📸 이달의 베스트 컷</h3>
+                        <p class="best-cut-desc">오사카성의 벚꽃 풍경입니다.</p>
+                        <div class="best-cut-card-content">
+                            <img src="media/오사카성.jpg" alt="오사카성">
+                            <p class="caption">일본 오사카성의 아름다운 풍경 (2025년 촬영)</p>
+                        </div>
+                    </section>
+
+                    <!-- 오른쪽 구역: 미니 게임 (기존 구조 유지) -->
+                    <section class="mini-game-section">
+                        <h3>🎮 미니 게임</h3>
+                        <p class="game-desc">재미있는 기능을 체험해 보세요!</p>
+                        <div class="game-btn-group">
+                            <button type="button" class="game-btn" onclick="startGame()">업다운 게임 시작 🚀</button>
+                            <button type="button" class="game-btn" onclick="calculateGrade()">성적 계산기 📊</button>
+                            <button type="button" class="game-btn" onclick="showMyBag()">내 가방 보기 🎒</button>
+                        </div>
+                    </section>
+
+                </div>
             </main>
 
             <aside>
@@ -58,8 +77,26 @@
                         <p style="margin: 3px 0; color: #555;">습도: 79% | 바람: 북풍 2 mph</p>
                     </div>
                 </section>
+
+                <div class="world-weather">
+                    <h3>🌍 실시간 세계 날씨</h3>
+                    <p class="weather-desc">원하는 도시의 날씨를 실시간으로 조회하세요.</p>
+                    
+                    <!-- 차후 API 비동기 조회에 연동할 드롭다운 요소 배치 -->
+                    <select id="city-select">
+                        <option value="">-- 도시를 선택하세요 --</option>
+                        <option value="seoul">대한민국 서울 KR</option>
+                        <option value="tokyo">일본 도쿄 JP</option>
+                        <option value="paris">프랑스 파리 FR</option>
+                    </select>
+                    
+                    <div id="weather-result" class="weather-result-box">
+                        <p class="empty-msg">도시를 선택하면 실시간 날씨가 표시됩니다.</p>
+                    </div>
+                </div>
             </aside>
         </div>
+        
         <hr>
 
         <footer>
@@ -67,6 +104,11 @@
             <p><small>© 2026 이건 포트폴리오. 모든 태그는 웹 표준 시맨틱 태그로 작성되었습니다.</small></p>
         </footer>
     </div>
+
+    <!-- 스크립트 연결부 -->
     <script src="script/upDown.js"></script>
+    <script src="script/grade.js"></script>
+    <script src="script/bag.js"></script>
+    <script type="module" src="script/realtimeInfo.js"></script>
 </body>
 </html>
