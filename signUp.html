@@ -17,7 +17,7 @@
 
             <p>
                 <label for="userId">아이디: </label>
-                <input type="text" id="userId" name="userId" minlength="4" maxlength="15" required placeholder="4~15자 영문/숫자 (필수)">
+                <input type="text" id="userId" name="userId" minlength="4" maxlength="15" required placeholder="4~15자 한글/영문 (필수)">
             </p>
 
             <p>
@@ -27,10 +27,10 @@
 
             <p>
                 <label for="email">이메일: </label>
-                <input type="email" id="email" name="email" required placeholder="이메일 주소입력">
+                <input type="text" id="email" name="emailId" required placeholder="이메일 주소입력">
                 @
-                <select name="emailDomain" id="emailDomain">
-                    <option value="direct">직접 입력</option>
+                <select name="emailDomain" id="emailDomain" required>
+                    <option value="">-- 선택해 주세요 --</option>
                     <option value="naver.com">naver.com</option>
                     <option value="gmail.com">gmail.com</option>
                     <option value="daum.net">daum.net</option>
@@ -86,7 +86,7 @@
         <fieldset>
             <legend>자기소개</legend>
             <p>
-                <textarea name="introduction" id="introduction" rows="4" cols="50" placeholder="나를 표현하는 한 줄 소개 또는 가입 인사 &#10;: 여기에 내용을 입력하세요. (최대 200자)"></textarea>
+                <textarea name="introduction" id="introduction" rows="4" cols="50" placeholder="나를 표현하는 한 줄 소개 또는 가입 인사 (최대 200자)"></textarea>
             </p>
         </fieldset>
 
